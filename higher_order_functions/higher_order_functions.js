@@ -77,18 +77,38 @@
 // console.log(dosomeMaths(12, increment))
 // console.log(dosomeMaths(12, square))
 
-function getTweetsAsync(callback) {
-  // api of tweets
+// function getTweetsAsync(callback) {
+//   // api of tweets
+//
+//   setTimeout(function() {
+//     var tweets = "These are the bomb!"
+//     callback(tweets)
+//   }, 1000)
+// }
+//
+// var myTweets = "null"
+// getTweetsAsync(function(tweets) {
+//   myTweets = tweets
+// })//no sure whats happening here...
+//
+// console.log(myTweets)
 
-  setTimeout(function() {
-    var tweets = "These are the bomb!"
-    callback(tweets)
-  }, 1000)
+let add = function(a,b) {
+  return a + b
 }
 
-var myTweets = "Da billy"
-getTweetsAsync(function(tweets) {
-  myTweets = tweets
-})//no sure whats happening here...
+let multi = function(a,b) {
+  return a * b
+}
 
-console.log(myTweets)
+let doWhatEver = function(a,b) {
+  console.log("here is your sum back ${a}, ${b}")
+}
+
+let calc = function(num1, num2, callback) {
+  if (typeof callback === "function") {
+    return callback(num1, num2)
+  }
+}
+
+console.log(calc(61, 21, function(a,b) {return a-b;}))
