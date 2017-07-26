@@ -12,7 +12,7 @@ Higher-order functions either take a function as an argument or return a functio
 
 Because functions are *first class objects* in JavaScript, they can be referenced by variables and passed around just like variables.
 
-Let's create a directory. 
+Let's create a directory.
 
 ```
 mkdir higher_order_functions
@@ -28,7 +28,7 @@ setTimeout(function() {
 }, 1000);
 ```
 
-So here the first argument is the callback and the second is a value in milliseconds. setTimeout is a built in JavaScript function and we're using it here to illustrate how callbacks behave. 
+So here the first argument is the callback and the second is a value in milliseconds. setTimeout is a built in JavaScript function and we're using it here to illustrate how callbacks behave.
 
 In the example above, the callback is an *anonymous* function. It has no name and is passed in at the same time that it is defined.
 
@@ -84,6 +84,7 @@ What will this function do? What if we called it with a different argument?
 ```
 redChecker("blue", logRed, logNotRed);
 ```
+it will logout "it's NOT red!"
 
 ## Passing Arguments to Callbacks
 
