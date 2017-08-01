@@ -10,16 +10,23 @@ var arrayTasks = {
 	},
 
 	square: function (arr) {
-
+		return arr.map(function(x){ return x * x});
 	},
 
-	// sum: function (arr) {
+	sum: function (arr) {
+		return arr.reduce(function(total, number) {
+			return number + total
+		})
+	},
 
-	// },
 
-	// findDuplicates: function (arr) {
-
-	// },
+	findDuplicates: function (arr) {
+		return arr.filter(function(item, i) {
+			var restOfArrayInculdersItem = arr.slice(i + 1).includes(item)
+			var isFirstInstanceOfitem = arr.indexOf(item) === i
+			return restOfArrayIncludesItem && isFirstInstanceOfitem
+		})
+	},
 
 	// removeAndClone: function (arr, valueToRemove) {
 
